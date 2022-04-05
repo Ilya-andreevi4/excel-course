@@ -11,9 +11,10 @@
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 
     .button {
         @include button(green);
+        margin-right: 30px;
     }
 }
