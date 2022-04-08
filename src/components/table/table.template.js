@@ -11,7 +11,8 @@ function toCell(_, col) {
 
 function toColumn(col, index) {
     return `
-        <div class="column" data-type="resizable" data-col="${index}">
+        <div class="column" data-type="resizable" data-col="${index}" 
+        onmousedown="return false">
             ${col}
             <div class="col-resize" data-resize="col"></div>
         </div>
@@ -20,7 +21,8 @@ function toColumn(col, index) {
 
 function createRow(index, content) {
     const resizer = index 
-        ? `<div class="row-resize" data-resize="row"></div>`
+        ? `<div class="row-resize" data-resize="row" onmousedown="return false">
+        </div>`
         :''
     return `
         <div class="row" data-type="resizable">
